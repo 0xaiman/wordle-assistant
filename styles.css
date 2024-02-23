@@ -1,0 +1,50 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.letter-input-field{
+    width:62px;
+    height:62px;
+    font-size: 40px;
+    text-align: center;
+}
+.top-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#input-field-section{
+    display: flex;
+    justify-content: center;
+}
+
+#eliminate-letter-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.eliminate-letter-button{
+    width:48px;
+    height:48px;
+    font-size: 32px;
+
+}
+
+#reset-btn{
+    background-color: rgb(250, 77, 58);
+
+}
+
+#check-btn{
+    background-color: green;
+}
+
+.eliminate-letter-button:active{
+    background-color: #1f1f1f;
+    color: azure;
+}
