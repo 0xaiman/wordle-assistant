@@ -2,4 +2,4 @@ const words = ["docty","aahed","aalii","aargh","zygon","zymes","zymic","aaaan","
 
 
 // module.exports = words
-export default words;
+ export default words;
