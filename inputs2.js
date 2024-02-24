@@ -43,7 +43,6 @@ mustNotHaveLetter.forEach(button =>{
 
 
     // filtering functions
-    const containsLetter =(word,letter)=>word.toLowerCase().includes(letter.toLowerCase()) && word.toUpperCase().includes(letter.toUpperCase());
     const doNotContainLetter =(word,letter)=>!word.toLowerCase().includes(letter.toLowerCase()) && !word.toUpperCase().includes(letter.toUpperCase());
     
     const hasLetterInPosition = (word, letter,position)=> {
@@ -59,6 +58,9 @@ mustNotHaveLetter.forEach(button =>{
         var gridContainer = document.createElement("div");
         gridContainer.classList.add("grid-container");
 
+        var itemsCount = document.createElement('div');
+        itemsCount.classList.add("items-count");
+
         const filteredWords = allWords.filter(word =>
             mustNotHaveLetterArray.every(letter=>doNotContainLetter(word,letter))
             &&inputHasLetter.every((letter,index)=>hasLetterInPosition(word,letter,index))
@@ -71,9 +73,9 @@ mustNotHaveLetter.forEach(button =>{
             gridContainer.appendChild(gridItem)
         
             })
-            
     possibleWords.innerHTML="";
-
+    itemsCount.textContent= `There are ${filteredWords.length} possible word(s)`;
+    possibleWords.appendChild(itemsCount)
     possibleWords.appendChild(gridContainer)
 
     }
